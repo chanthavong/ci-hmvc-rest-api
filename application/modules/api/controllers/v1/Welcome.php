@@ -7,7 +7,9 @@ class Welcome extends REST_Controller {
 
 	public function index_get()
 	{
-		echo 'ok';
+		$this->data['message'] = 'API Version 1.0';
+		$this->data['data'] = 'run from /Application/modules/api/controllers/v1/welcome.php';
+		$this->response($this->data);
 	}
 
 }

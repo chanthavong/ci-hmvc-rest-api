@@ -7,7 +7,8 @@ class Customer extends REST_Controller {
 
 	public function index_get()
 	{
-		echo 'ok';
+		$this->data['data'] = 'this is customer get';
+		$this->response($this->data);
 	}
 
 	public function index_post($value='')

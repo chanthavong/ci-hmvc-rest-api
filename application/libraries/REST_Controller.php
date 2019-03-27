@@ -377,9 +377,14 @@ abstract class REST_Controller extends CI_Controller {
      * e.g: my_rest.php is passed as 'my_rest'
      * @return void
      */
+
+    public $data = [];
+
     public function __construct($config = 'rest')
     {
         parent::__construct();
+
+        $this->data['status'] = true;
 
         // Disable XML Entity (security vulnerability)
         libxml_disable_entity_loader(TRUE);
